@@ -1,27 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navbarMenu = document.querySelector('#navbarNav');
     const navbarToggler = document.querySelector('.navbar-toggler');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarMenu = document.querySelector('#navbarNav');
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-            // Close the navbar menu if open
-            if (navbarMenu.classList.contains('show')) {
-                navbarMenu.classList.remove('show');
-            }
-        });
-    });
-
-    navbarToggler.addEventListener('click', function() {
+    navbarToggler.addEventListener('click', () => {
         navbarMenu.classList.toggle('show');
     });
 
-    // Close navbar when any nav link is clicked
-    navLinks.forEach(link => {
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', () => {
             if (navbarMenu.classList.contains('show')) {
                 navbarMenu.classList.remove('show');
