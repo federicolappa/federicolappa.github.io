@@ -1,21 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+            closeNavbarMenu();
         });
     });
 
-    // Navbar toggler for responsive menu
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarMenu = document.querySelector('.navbar-collapse');
 
     navbarToggler.addEventListener('click', () => {
         navbarMenu.classList.toggle('show');
     });
+
+    function closeNavbarMenu() {
+        if (navbarMenu.classList.contains('show')) {
+            navbarMenu.classList.remove('show');
+        }
+    }
 });
 
 (function() {
