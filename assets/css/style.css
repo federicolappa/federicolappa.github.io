@@ -1,0 +1,262 @@
+/* generale */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* menu */
+.navbar {
+    background-color: #0056b3;
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffeb3b;
+}
+
+/* hero */
+.hero-section {
+    background: linear-gradient(45deg, #ecdbff 0%, #262c6d 100%);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s;
+}
+
+/* sezioni */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    color: #0056b3;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1s;
+}
+
+/* skills */
+.skills-section .col-md-4 {
+    margin-bottom: 30px;
+}
+
+.skills-section i {
+    font-size: 4rem;
+    color: #6a11cb;
+    transition: color 0.3s;
+}
+
+.skills-section i:hover {
+    color: #2575fc;
+}
+
+/* portfolio */
+.portfolio-entry {
+    margin: 50px 0px;
+}
+
+.portfolio-entry img {
+    width: 600px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* form contatti */
+.contact {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffeb3b;
+    color: #0056b3;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer .social-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer .social-link:hover {
+    color: #ffeb3b;
+}
+
+.footer-social-links {
+    margin: 50px 0 0;
+}
+
+/* animazioni */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* colori icone */
+.fa-linkedin {
+    color: #0077b5; 
+}
+
+.fa-linkedin:hover {
+    color: #005983;
+}
+
+.fa-github {
+    color: #6e5494; 
+}
+
+.fa-github:hover {
+    color: #5b467b;
+}
+
+.fa-html5 {
+    color: #e34f26;
+}
+
+.fa-css3-alt {
+    color: #1572B6;
+}
+
+.fa-wordpress {
+    color: #21759b;
+}
+
+.fa-google {
+    color: #4285F4;
+}
+
+.fa-facebook-f {
+    color: #3b5998;
+}
+
+.fa-chart-line {
+    color: #f39c12;
+}
+
+.fa-file-word {
+    color: #2B579A;
+}
+
+.fa-briefcase {
+    color: #08F6A5; 
+}
+
+.fa-briefcase:hover {
+    color: #31926E; 
+}
+
+/* fix link fontawesome */
+a.social-link {
+    text-decoration: none; /* Removes underline */
+}
+
+a.social-link:hover,
+a.social-link:focus {
+    text-decoration: none;
+}
+
+/* foto */
+.img-profile {
+    width: 250px; 
+    height: auto;
+    object-fit: cover;
+    object-position: top right;
+    display: block;
+    margin: 0 auto;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
