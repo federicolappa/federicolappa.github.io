@@ -1,18 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navbarMenu = document.querySelector('#navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+            // Close the navbar menu if open
+            if (navbarMenu.classList.contains('show')) {
+                navbarMenu.classList.remove('show');
+            }
         });
     });
 
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarMenu = document.querySelector('#navbarNav');
-
     navbarToggler.addEventListener('click', function() {
         navbarMenu.classList.toggle('show');
+    });
+
+    // Close navbar when any nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarMenu.classList.contains('show')) {
+                navbarMenu.classList.remove('show');
+            }
+        });
     });
 
     (function() {
