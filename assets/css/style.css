@@ -224,7 +224,7 @@ footer .social-link:hover {
 
 /* fix link fontawesome */
 a.social-link {
-    text-decoration: none; /* Removes underline */
+    text-decoration: none; 
 }
 
 a.social-link:hover,
