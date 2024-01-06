@@ -142,20 +142,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script> 
-    <script type="text/javascript">
-        (function() {
-        emailjs.init("wBASQ9TpaWAJazne4");
-    })();
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        emailjs.sendForm('service_l2b833g', 'template_qyc3bcx', this)
-            .then(function() {
-                console.log('SUCCESS!');
-            }, function(error) {
-                console.log('FAILED...', error);
-            });
-    });
-    </script>
 </body>
 </html>
